@@ -2,20 +2,18 @@
   <h1>Simplest Possible AJAX</h1>
   <p>This contrived app will simulate a roll of a n-sided die.</p>
 
-  <form method="post" action="/rolls">
+  <form id="die_form" method="post" action="/rolls">
     <p>
       <label name="sides"/>How many sides?</label>
-      <input name="sides" type="integer" placeholder="optional - default=6"/>
+      <input id="sides" name="sides" type="integer" placeholder="optional - default=6"/>
     </p>
     <p><input type="submit" value="Roll the Die"></p>
   </form>
 
-  <% if @die %>
-    <div class="die">
+    <div id="die_image" class="die">
       <span class="roll">
-        <%= @die.roll %>
+        x
       </span>
     </div>
-  <% end %>
 
 </div>
